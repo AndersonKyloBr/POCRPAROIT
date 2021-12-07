@@ -1,0 +1,754 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2526,5002" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ucat="clr-namespace:UiPath.Core.Activities.TextModifications;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Core.Activities.TextModifications</x:String>
+      <x:String>UiPath.Activities.System.Workflow.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="2536,4937" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" Name="strIBGEA" />
+      <Variable x:TypeArguments="x:String" Name="ResultImput" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="2494,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Informe (A) (B) ou (C)" Title="Busca dados IBGE">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[ResultImput]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <If Condition="[ResultImput = &quot;A&quot;]" sap:VirtualizedContainerService.HintSize="2494,4567" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="633,3909" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: IBGE | Concla | Busca online" sap:VirtualizedContainerService.HintSize="591,3817" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1" WindowResize="Maximize">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="557,3601" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="cadSelecao" />
+                    <Variable x:TypeArguments="x:String" Name="descSelecao" />
+                    <Variable x:TypeArguments="x:String" Name="cadDivisao" />
+                    <Variable x:TypeArguments="x:String" Name="descDivisao" />
+                    <Variable x:TypeArguments="x:String" Name="cadGrupo" />
+                    <Variable x:TypeArguments="x:String" Name="descGrupo" />
+                    <Variable x:TypeArguments="x:String" Name="cadClasse" />
+                    <Variable x:TypeArguments="x:String" Name="descClasse" />
+                    <Variable x:TypeArguments="x:String" Name="descSubClasse" />
+                    <Variable x:TypeArguments="x:String" Default="POCROITBank.xlsx" Name="strExcel" />
+                    <Variable x:TypeArguments="x:String" Name="cadSecao" />
+                    <Variable x:TypeArguments="x:String" Name="descSecao" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text 'Seção'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="347, 409, 8, 15" ElementType="Text" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="387c5068-94e2-4277-b4b7-3acf838d0c78" ImageBase64="" InformativeScreenshot="b2c29f9f0150fd065d6f850664ce2c71.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="251, 401, 91, 32" FriendlyName="'Seção'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname='' check:text='Seção:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAkCAYAAADvqeb3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVGhD7dVBCoMwEIXhXrrr3qCHzA1cuQqWtkwZhzFijHlOfYsPkkwQ+iP2NgzDRBi/+Ckl6mwWfxxH6ojxgRgfiPGBGB+I8YEYH4jxgRgfiPGBThf//nh+yNrO/0l1fImkefe2kue0fOZZVcX3wlwhVmvN4ltyx7vbemb3UeyKv/Sj7bner83k3JvpeWkWxSHf/NLezjxyR9/Va28fUXV8IRF0DHsm9Ew/Q1u6q9fePqLd8YWOUQqzZab3pVlUzf5w9Zmd955Fccg335vXzvR87Vz2UTT77GwVNVhLsPhvjA+Iz7f+C/rmXx3jAzE+EOMDMT4Q4wMxPhDjA83i55ypI8YHYnyYPL0AXGsHmy+Fud8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[cadSecao]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Seção'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="362, 401, 749, 32" ElementType="Text" FriendlyName="'AGRICULTURA, PECUÁRIA,'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' type='' /&gt;" Guid="750df708-f7f3-47a8-984f-42bf4a8c53d9" InformativeScreenshot="36c743aaa763744b901ab403b1f5d8af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="262, 409, 39, 15" ElementType="Text" FriendlyName="'Seção'" FullSelectorArgument="&lt;webctrl parentid='hierarquia' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='SPAN' type='' aaname='Seção:' check:text='Seção:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAATCAYAAAAJdPQAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVEhL7ZNBCsMwDAT76Z77g37XxxQVtmy2W8VJ5IIhhwHLIyuLcW6ttWUWrrCjuMIq98fzDdbqe1mFxVCG/VEw5+zMT1g36OzwatKwCnpcb7XTOvgK65rYu3rLYd859pkLut9sVqtzoId7ee1qZRUW4BAf1j3Ajmcwv3p57WrFhgV8OBu0x3GdOUf6g/Ge+n+7oPvNOn/Usd/aRx2kz2Av7gOVlIYNpgg7+laD8psdyURh2/ICxe+NaksjhqsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[descSecao]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Divisão'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="367, 440, 14, 15" ElementType="Text" FriendlyName="'01'" FullSelectorArgument="&lt;webctrl aaname='01' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="c7fe60c5-9689-4b53-a229-afc8d189868d" InformativeScreenshot="c7d50099ecf703c12bf8ec241dd67983.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="262, 440, 44, 15" ElementType="Text" FriendlyName="'Divisão'" FullSelectorArgument="&lt;webctrl aaname='Divisão:' parentid='hierarquia' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Divisão:' parentid='hierarquia' tag='SPAN' type='' check:text='Divisão:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAATCAYAAADWOo4fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAClSURBVEhL7Y9bCsQgFEO76X53B7Nj6eBASkhzrRasU/DjwM1DIUtKaX8zc8Bo5oC7rNvnB27NazkG4EOGi85TajoAvZY3jtOASP8r4QD1cLOnPc0i/26mOtNtAN+q2XcZ56Us0zyg9YZ2cAc9vp1Wug1grb52o9tppesAAD/q1WaOcECtjjpPZJnTAIaL6rleqcO+yzi/8qEzx4C3MgeMZg4YS9q/HxsFZP/8/CsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[cadDivisao]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Divisão'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="362, 432, 749, 31" FriendlyName="'01 AGRICULTURA,'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="b5228bdd-7609-43a2-b84b-69d27fd8a5cb" InformativeScreenshot="557a0fb5ad3dc388694f00c4f7ebc6c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="251, 432, 91, 31" FriendlyName="'Divisão'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Divisão:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD7SURBVGhD7ZoxDsMwDAP76c79QR/pH3jyFKRoAQGKIKeO44QywOEAi2SWm/PIOa9fUkprKYXcCOUD2chfloXcCOUDoXwglA+E8oFQPhDKB0L5QCgfCOUDmUL+8/X+IW/bz0qXfJGh8XqdWVo2guyOfDMDp+TXbtLGEPk2k7fO7M52tby3s3dEQsjXb3vr3Ot0v9dF5FL5R99ye+iN7PTbu6MTQr6+bW63tbd3RyeMfEHy2q61m4Eh8lvv2uaOLiKn5Gu83tu3bHTudbr/l8sdkS75ZAyUD4TygVA+EMoHQvlAKB8I5QOhfCCUD4TygWzke/+Qk+ugfBhl/QCN/i6Cy+ExZgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[descDivisao]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Grupo'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="386, 471, 24, 15" ElementType="Text" FriendlyName="'01.1'" FullSelectorArgument="&lt;webctrl aaname='01.1' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="f5e4676d-2d6b-4a05-9f03-4401c0617f9d" InformativeScreenshot="a8f564144841b76b9d2e38be6790f476.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="251, 463, 91, 31" FriendlyName="'Grupo'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Grupo:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVGhD7doxDsIwEERRLk3NDThkbpAqlRXkYiVnZMdh42RYMcWTvN5Q5EPJY57nNZumaU0pyY0Un2gTf1kWuZHiEyk+keITKT6R4hMpPpHiEyk+keITKT7RqfjP13uj9oy0ueNjcH0B33PF74W2fflceca5dcZncYdzNJfG37srZzvjfPRztotmSHyb7Q73tbty9u6iG/bLL+96e5y9u+gUn8gVP9uLgrvWvjfjubeLxh0/s5fHCDjX7o+cjd3hDudoTsUfJXpEL8Un+on4/0rxiRSfSPGJFJ9I8YkUn0jxiRSfaBO/9h9yuY7i06T1A2VHyk/OFssZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[cadGrupo]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Grupo'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="362, 463, 749, 31" FriendlyName="'01.1 Produção'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="a4d349a2-2ddf-48e0-8ccf-8e6fac766fdc" InformativeScreenshot="a069cf690dc07278e6047cb860502269.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="251, 463, 91, 31" FriendlyName="'Grupo'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Grupo:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVGhD7doxDsIwEERRLk3NDThkbpAqlRXkYiVnZMdh42RYMcWTvN5Q5EPJY57nNZumaU0pyY0Un2gTf1kWuZHiEyk+keITKT6R4hMpPpHiEyk+keITKT7RqfjP13uj9oy0ueNjcH0B33PF74W2fflceca5dcZncYdzNJfG37srZzvjfPRztotmSHyb7Q73tbty9u6iG/bLL+96e5y9u+gUn8gVP9uLgrvWvjfjubeLxh0/s5fHCDjX7o+cjd3hDudoTsUfJXpEL8Un+on4/0rxiRSfSPGJFJ9I8YkUn0jxiRSfaBO/9h9yuY7i06T1A2VHyk/OFssZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[descGrupo]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Classe'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="406, 502, 41, 15" ElementType="Text" FriendlyName="'01.11-3'" FullSelectorArgument="&lt;webctrl aaname='01.11-3' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="fc8b5203-241f-42a1-87db-14f443a75898" InformativeScreenshot="6f9b37afb23dac91dfeaa261bdfd2398.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="251, 494, 91, 31" FriendlyName="'Classe'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Classe:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVGhD7doxDoMwEETRXDp1bpBDcgMqV4iIwtIywSQyssdIv3hS1usUfEVUeczzvG6maVpTSuiI+Ea7+MuyoCPiGxHfiPhGxDcivhHxjYhvRHwj4hsR3+hS/OfrvaPn8S6+Vcc/C647HKuK/yuu7vOs5y12Oo+seXy9p7u4b7EbWZdffjyLO51L90u70nwXXV87Zzs9P9vpeRa/ewddXjvxrs56/s+udO9uquJvNECcS58du5FVx9/kB9UHLs1RaZfPa3c6j+xSfFxDfCPiGxHfiPhGxDcivhHxjYhvRHwj4hvt4h/9hxztEN8mrR+oeV0i0wshVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[cadClasse]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Classe'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="362, 494, 749, 31" FriendlyName="'01.11-3 Cultivo'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="7e5a1028-a9c2-466c-b778-0491a2779e17" InformativeScreenshot="279b8e65a1a58b41eaa6a78720e2903b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="251, 494, 91, 31" FriendlyName="'Classe'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Classe:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVGhD7doxDoMwEETRXDp1bpBDcgMqV4iIwtIywSQyssdIv3hS1usUfEVUeczzvG6maVpTSuiI+Ea7+MuyoCPiGxHfiPhGxDcivhHxjYhvRHwj4hsR3+hS/OfrvaPn8S6+Vcc/C647HKuK/yuu7vOs5y12Oo+seXy9p7u4b7EbWZdffjyLO51L90u70nwXXV87Zzs9P9vpeRa/ewddXjvxrs56/s+udO9uquJvNECcS58du5FVx9/kB9UHLs1RaZfPa3c6j+xSfFxDfCPiGxHfiPhGxDcivhHxjYhvRHwj4hvt4h/9hxztEN8mrR+oeV0i0wshVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[descClasse]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NGetText DisplayName="Get Text 'Subclasse'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0111301" DesignTimeRectangle="426, 533, 145, 15" ElementType="Text" FriendlyName="'0111-3/01 Cultivo'" FullSelectorArgument="&lt;webctrl aaname='0111-3/01 Cultivo de arroz' parentid='hierarquia' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='SPAN' type='' /&gt;" Guid="e8b72138-b039-4c20-bc21-6e20121f3b45" InformativeScreenshot="aa4b54bf53e3d430cdd9b4779c1450cc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="251, 525, 91, 32" FriendlyName="'Subclasse'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Subclasse:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAkCAYAAADvqeb3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVGhD7ZUxDsIwEAT5NDU/4JH5QapUURDFoWXJGcfYWYotRvLeniVriuQyz/P2ZJqmbV1XcyKWL+RN/rIs5kQsX4jlC7F8IZYvxPKFWL4Qyxdi+UIsX4jlC2mWf73dP9jbY47sIq33/pkm+XsiauXU7jGt9/6ZbvIR7jFnZ97lLss8H9Fx7sVP8rNH8RxznDnX3otz7JT2RnW9GPLNL+UjHbLXxQw7ztl+1mV5BM3yg3gkPhbPnI90CHeYs47npY7nAd7tzc/yA3wsP7y1Q0p7nHle02V7I+n2w8XZ3vlb5nOpw7Oi68WQbz72tecgZtxlGcm6mLd2nHvR7bNjjmP5QixfiOULsXwhli/E8oVYvhDLF2L5QixfyJt8cy4v+eZ8LF/GvD0ABf14b1RJlR4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[descSubClasse]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="515,1743" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[strExcel]">
+                    <ui:ExcelApplicationScope.Body>
+                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="481,1634" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelWriteCell Cell="A2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Planilha1" Text="[cadSecao]" />
+                          <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="439,272" sap2010:WorkflowViewState.IdRef="ModifyText_1" OutputText="[descSecao]" SourceText="[descSecao]">
+                            <ui:ModifyText.Body>
+                              <ActivityAction>
+                                <Sequence DisplayName="Fazer" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ucat:ToUpperLowerTextModification DisplayName="Colocar todo o texto em Maiúscula/Minúscula" sap:VirtualizedContainerService.HintSize="387,79" sap2010:WorkflowViewState.IdRef="ToUpperLowerTextModification_1" ModificationType="Lowercase" />
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ModifyText.Body>
+                          </ui:ModifyText>
+                          <ui:ExcelWriteCell Cell="B2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Planilha1" Text="[descSecao]" />
+                          <ui:ExcelWriteCell Cell="C2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Planilha1" Text="[cadDivisao]" />
+                          <ui:ExcelWriteCell Cell="D2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Planilha1" Text="[descDivisao]" />
+                          <ui:ExcelWriteCell Cell="E2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Planilha1" Text="[cadGrupo]" />
+                          <ui:ExcelWriteCell Cell="F2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="Planilha1" Text="[descGrupo]" />
+                          <ui:ExcelWriteCell Cell="G2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Planilha1" Text="[cadClasse]" />
+                          <ui:ExcelWriteCell Cell="H2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Planilha1" Text="[descClasse]" />
+                          <ui:ExcelWriteCell Cell="I2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="Planilha1" Text="[descSubClasse]" />
+                          <ui:ExcelWriteCell Cell="J2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_10" SheetName="Planilha1" Text="[descSubClasse]" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ExcelApplicationScope.Body>
+                  </ui:ExcelApplicationScope>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVDhPpdIxDgFBGAVgV1ChoFZxBJXCDUhEIdlSJSq1S3AJIiJZhUI0m+gdQL2ixDLe2+zIy2QKG5t8G/v/5s3s7BSMMX/xFvPwFvP4XrP5cQ/G4wRreX7DBYJvAB6qWUMH0hWa8JCaFWvA2GnSDVpQl5pKNCBymmeYwhb6wJVon6I0AD9qWYEz7mAIZUiA9Tu0YQFL0bUBPVhJg3/swBNsQBEYHAInYr1iA9zlE5c8gA1MgK+k/QNf3QbYpbq4edxEO6MaaUDsNImfrQG+zXtBSQMC4MHQc8CDwwOkA62Qg3mlAbz9w1vMw1v8nSl8AF/uttd0vyW9AAAAAElFTkSuQmCC" InformativeScreenshot="c48b90405134a7d39b1077fc69493d9a.png" Selector="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online'/&gt;" Url="[strIBGEA]" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="1816,4409" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If Condition="[ResultImput = &quot;B&quot;]" sap:VirtualizedContainerService.HintSize="1774,4317" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="633,3909" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Default="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" Name="strIBGEB" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: IBGE | Concla | Busca online" sap:VirtualizedContainerService.HintSize="591,3817" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1" WindowResize="Maximize">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="557,3601" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="cadSelecao" />
+                          <Variable x:TypeArguments="x:String" Name="descSelecao" />
+                          <Variable x:TypeArguments="x:String" Name="cadDivisao" />
+                          <Variable x:TypeArguments="x:String" Name="descDivisao" />
+                          <Variable x:TypeArguments="x:String" Name="cadGrupo" />
+                          <Variable x:TypeArguments="x:String" Name="descGrupo" />
+                          <Variable x:TypeArguments="x:String" Name="cadClasse" />
+                          <Variable x:TypeArguments="x:String" Name="descClasse" />
+                          <Variable x:TypeArguments="x:String" Name="descSubClasse" />
+                          <Variable x:TypeArguments="x:String" Default="POCROITBank.xlsx" Name="strExcel" />
+                          <Variable x:TypeArguments="x:String" Name="descSecao" />
+                          <Variable x:TypeArguments="x:String" Name="cadSecao" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text 'Seção'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_19" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="347, 335, 8, 15" ElementType="Text" FriendlyName="'B'" FullSelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="f323fa4e-1405-4218-ac2a-e36a2d319342" InformativeScreenshot="d9cdd2a27ec9e4af54d6a86df29948e3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="262, 335, 39, 15" ElementType="Text" FriendlyName="'Seção'" FullSelectorArgument="&lt;webctrl parentid='hierarquia' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='SPAN' type='' aaname='Seção:' check:text='Seção:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAATCAYAAAAJdPQAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC3SURBVEhL7ZNBCsMwDAT76Z77g37XxxQVtmy2W8VJ5IIhhwHLIyuLcW6ttWUWrrCjuMIq98fzDdbqe1mFxVCG/VEw5+zMT1g36OzwatKwCnpcb7XTOvgK65rYu3rLYd859pkLut9sVqtzoId7ee1qZRUW4BAf1j3Ajmcwv3p57WrFhgV8OBu0x3GdOUf6g/Ge+n+7oPvNOn/Usd/aRx2kz2Av7gOVlIYNpgg7+laD8psdyURh2/ICxe+NaksjhqsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[cadSecao]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Seção'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_20" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="362, 327, 749, 32" ElementType="Text" FriendlyName="'INDÚSTRIAS EXTRATIVAS'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' type='' /&gt;" Guid="8997f771-797d-4bbd-a36c-edf4a400357c" InformativeScreenshot="e17e4d8911418277e04ad20ca666200a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="251, 327, 91, 32" FriendlyName="'Seção'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname='' check:text='Seção:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAkCAYAAADvqeb3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVGhD7dVBCoMwEIXhXrrr3qCHzA1cuQqWtkwZhzFijHlOfYsPkkwQ+iP2NgzDRBi/+Ckl6mwWfxxH6ojxgRgfiPGBGB+I8YEYH4jxgRgfiPGBThf//nh+yNrO/0l1fImkefe2kue0fOZZVcX3wlwhVmvN4ltyx7vbemb3UeyKv/Sj7bner83k3JvpeWkWxSHf/NLezjxyR9/Va28fUXV8IRF0DHsm9Ew/Q1u6q9fePqLd8YWOUQqzZab3pVlUzf5w9Zmd955Fccg335vXzvR87Vz2UTT77GwVNVhLsPhvjA+Iz7f+C/rmXx3jAzE+EOMDMT4Q4wMxPhDjA83i55ypI8YHYnyYPL0AXGsHmy+Fud8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[descSecao]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Divisão'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_21" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="367, 366, 14, 15" ElementType="Text" FriendlyName="'05'" FullSelectorArgument="&lt;webctrl aaname='05' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="18d2b1c1-71ba-4547-8a08-47362cf3c28a" InformativeScreenshot="209dc3cb7826d14b97296a13a8d17ef7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="262, 366, 44, 15" ElementType="Text" FriendlyName="'Divisão'" FullSelectorArgument="&lt;webctrl aaname='Divisão:' parentid='hierarquia' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Divisão:' parentid='hierarquia' tag='SPAN' type='' check:text='Divisão:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAATCAYAAADWOo4fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAClSURBVEhL7Y9bCsQgFEO76X53B7Nj6eBASkhzrRasU/DjwM1DIUtKaX8zc8Bo5oC7rNvnB27NazkG4EOGi85TajoAvZY3jtOASP8r4QD1cLOnPc0i/26mOtNtAN+q2XcZ56Us0zyg9YZ2cAc9vp1Wug1grb52o9tppesAAD/q1WaOcECtjjpPZJnTAIaL6rleqcO+yzi/8qEzx4C3MgeMZg4YS9q/HxsFZP/8/CsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[cadDivisao]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Divisão'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_22" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="362, 358, 749, 31" FriendlyName="'05 EXTRAÇÃO'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="77e8d2c5-1774-476d-a13c-537a4df5fd87" InformativeScreenshot="e53d2a81eab7a7fbea105bd596a185d6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="251, 358, 91, 31" FriendlyName="'Divisão'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Divisão:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD7SURBVGhD7ZoxDsMwDAP76c79QR/pH3jyFKRoAQGKIKeO44QywOEAi2SWm/PIOa9fUkprKYXcCOUD2chfloXcCOUDoXwglA+E8oFQPhDKB0L5QCgfCOUDmUL+8/X+IW/bz0qXfJGh8XqdWVo2guyOfDMDp+TXbtLGEPk2k7fO7M52tby3s3dEQsjXb3vr3Ot0v9dF5FL5R99ye+iN7PTbu6MTQr6+bW63tbd3RyeMfEHy2q61m4Eh8lvv2uaOLiKn5Gu83tu3bHTudbr/l8sdkS75ZAyUD4TygVA+EMoHQvlAKB8I5QOhfCCUD4TygWzke/+Qk+ugfBhl/QCN/i6Cy+ExZgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[descDivisao]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Grupo'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_23" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="386, 397, 24, 15" ElementType="Text" FriendlyName="'05.0'" FullSelectorArgument="&lt;webctrl aaname='05.0' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="23955f65-7bbd-4ace-897e-d7d6b649da7b" InformativeScreenshot="fc76402f0a80cd3366ef871f73062204.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="251, 389, 91, 31" FriendlyName="'Grupo'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Grupo:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVGhD7doxDsIwEERRLk3NDThkbpAqlRXkYiVnZMdh42RYMcWTvN5Q5EPJY57nNZumaU0pyY0Un2gTf1kWuZHiEyk+keITKT6R4hMpPpHiEyk+keITKT7RqfjP13uj9oy0ueNjcH0B33PF74W2fflceca5dcZncYdzNJfG37srZzvjfPRztotmSHyb7Q73tbty9u6iG/bLL+96e5y9u+gUn8gVP9uLgrvWvjfjubeLxh0/s5fHCDjX7o+cjd3hDudoTsUfJXpEL8Un+on4/0rxiRSfSPGJFJ9I8YkUn0jxiRSfaBO/9h9yuY7i06T1A2VHyk/OFssZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[cadGrupo]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Grupo'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_24" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="362, 389, 749, 31" FriendlyName="'05.0 Extração'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="0cd89872-163c-4196-8b11-3e6fd63901d8" InformativeScreenshot="6a8bdd6e6102b98cadeae32b47e465ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="251, 389, 91, 31" FriendlyName="'Grupo'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Grupo:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVGhD7doxDsIwEERRLk3NDThkbpAqlRXkYiVnZMdh42RYMcWTvN5Q5EPJY57nNZumaU0pyY0Un2gTf1kWuZHiEyk+keITKT6R4hMpPpHiEyk+keITKT7RqfjP13uj9oy0ueNjcH0B33PF74W2fflceca5dcZncYdzNJfG37srZzvjfPRztotmSHyb7Q73tbty9u6iG/bLL+96e5y9u+gUn8gVP9uLgrvWvjfjubeLxh0/s5fHCDjX7o+cjd3hDudoTsUfJXpEL8Un+on4/0rxiRSfSPGJFJ9I8YkUn0jxiRSfaBO/9h9yuY7i06T1A2VHyk/OFssZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[descGrupo]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Classe'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_25" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="406, 428, 42, 15" ElementType="Text" FriendlyName="'05.00-3'" FullSelectorArgument="&lt;webctrl aaname='05.00-3' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="74aaaa7f-cf8a-4532-aaba-6ebd80fc8461" InformativeScreenshot="fd892b6140d44a2ced0cf8ed241135cd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="251, 420, 91, 31" FriendlyName="'Classe'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Classe:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVGhD7doxDoMwEETRXDp1bpBDcgMqV4iIwtIywSQyssdIv3hS1usUfEVUeczzvG6maVpTSuiI+Ea7+MuyoCPiGxHfiPhGxDcivhHxjYhvRHwj4hsR3+hS/OfrvaPn8S6+Vcc/C647HKuK/yuu7vOs5y12Oo+seXy9p7u4b7EbWZdffjyLO51L90u70nwXXV87Zzs9P9vpeRa/ewddXjvxrs56/s+udO9uquJvNECcS58du5FVx9/kB9UHLs1RaZfPa3c6j+xSfFxDfCPiGxHfiPhGxDcivhHxjYhvRHwj4hvt4h/9hxztEN8mrR+oeV0i0wshVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[cadClasse]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Classe'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_26" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="362, 420, 749, 31" FriendlyName="'05.00-3 Extração'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="b8f0883f-5b5e-40e1-bc5c-340ed087513f" InformativeScreenshot="4b5fb3a9cc6b4e79104d98bf34ff292c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="251, 420, 91, 31" FriendlyName="'Classe'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Classe:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVGhD7doxDoMwEETRXDp1bpBDcgMqV4iIwtIywSQyssdIv3hS1usUfEVUeczzvG6maVpTSuiI+Ea7+MuyoCPiGxHfiPhGxDcivhHxjYhvRHwj4hsR3+hS/OfrvaPn8S6+Vcc/C647HKuK/yuu7vOs5y12Oo+seXy9p7u4b7EbWZdffjyLO51L90u70nwXXV87Zzs9P9vpeRa/ewddXjvxrs56/s+udO9uquJvNECcS58du5FVx9/kB9UHLs1RaZfPa3c6j+xSfFxDfCPiGxHfiPhGxDcivhHxjYhvRHwj4hvt4h/9hxztEN8mrR+oeV0i0wshVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[descClasse]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Subclasse'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_27" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=0500301" DesignTimeRectangle="426, 459, 215, 15" ElementType="Text" FriendlyName="'0500-3/01 Extração'" FullSelectorArgument="&lt;webctrl parentid='hierarquia' tableCol='3' tableRow='5' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' type='' tag='SPAN' /&gt;" Guid="22dd1875-3f85-490f-9d3b-b758b593690e" InformativeScreenshot="cca898221d3f0935926ac1093906ce59.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="251, 451, 91, 32" FriendlyName="'Subclasse'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Subclasse:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAkCAYAAADvqeb3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVGhD7ZUxDsIwEAT5NDU/4JH5QapUURDFoWXJGcfYWYotRvLeniVriuQyz/P2ZJqmbV1XcyKWL+RN/rIs5kQsX4jlC7F8IZYvxPKFWL4Qyxdi+UIsX4jlC2mWf73dP9jbY47sIq33/pkm+XsiauXU7jGt9/6ZbvIR7jFnZ97lLss8H9Fx7sVP8rNH8RxznDnX3otz7JT2RnW9GPLNL+UjHbLXxQw7ztl+1mV5BM3yg3gkPhbPnI90CHeYs47npY7nAd7tzc/yA3wsP7y1Q0p7nHle02V7I+n2w8XZ3vlb5nOpw7Oi68WQbz72tecgZtxlGcm6mLd2nHvR7bNjjmP5QixfiOULsXwhli/E8oVYvhDLF2L5QixfyJt8cy4v+eZ8LF/GvD0ABf14b1RJlR4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[descSubClasse]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="515,1743" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[strExcel]">
+                          <ui:ExcelApplicationScope.Body>
+                            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="481,1634" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelWriteCell Cell="A2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="Planilha1" Text="[cadSecao]" />
+                                <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="439,272" sap2010:WorkflowViewState.IdRef="ModifyText_2" OutputText="[descSecao]" SourceText="[descSecao]">
+                                  <ui:ModifyText.Body>
+                                    <ActivityAction>
+                                      <Sequence DisplayName="Fazer" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ucat:ToUpperLowerTextModification DisplayName="Colocar todo o texto em Maiúscula/Minúscula" sap:VirtualizedContainerService.HintSize="387,79" sap2010:WorkflowViewState.IdRef="ToUpperLowerTextModification_2" ModificationType="Lowercase" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ModifyText.Body>
+                                </ui:ModifyText>
+                                <ui:ExcelWriteCell Cell="B2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_12" SheetName="Planilha1" Text="[descSecao]" />
+                                <ui:ExcelWriteCell Cell="C2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="Planilha1" Text="[cadDivisao]" />
+                                <ui:ExcelWriteCell Cell="D2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="Planilha1" Text="[descDivisao]" />
+                                <ui:ExcelWriteCell Cell="E2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="Planilha1" Text="[cadGrupo]" />
+                                <ui:ExcelWriteCell Cell="F2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="Planilha1" Text="[descGrupo]" />
+                                <ui:ExcelWriteCell Cell="G2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="Planilha1" Text="[cadClasse]" />
+                                <ui:ExcelWriteCell Cell="H2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="Planilha1" Text="[descClasse]" />
+                                <ui:ExcelWriteCell Cell="I2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="Planilha1" Text="[descSubClasse]" />
+                                <ui:ExcelWriteCell Cell="J2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="Planilha1" Text="[descSubClasse]" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ExcelApplicationScope.Body>
+                        </ui:ExcelApplicationScope>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVDhPpdIxDgFBGAVgV1ChoFZxBJXCDUhEIdlSJSq1S3AJIiJZhUI0m+gdQL2ixDLe2+zIy2QKG5t8G/v/5s3s7BSMMX/xFvPwFvP4XrP5cQ/G4wRreX7DBYJvAB6qWUMH0hWa8JCaFWvA2GnSDVpQl5pKNCBymmeYwhb6wJVon6I0AD9qWYEz7mAIZUiA9Tu0YQFL0bUBPVhJg3/swBNsQBEYHAInYr1iA9zlE5c8gA1MgK+k/QNf3QbYpbq4edxEO6MaaUDsNImfrQG+zXtBSQMC4MHQc8CDwwOkA62Qg3mlAbz9w1vMw1v8nSl8AF/uttd0vyW9AAAAAElFTkSuQmCC" InformativeScreenshot="59f4be1a1f775d5ff8cf54f7d809db2c.png" Selector="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online'/&gt;" Url="[strIBGEB]" />
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="1096,4159" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[ResultImput = &quot;C&quot;]" sap:VirtualizedContainerService.HintSize="1054,4067" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="633,3909" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Default="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" Name="strIBGEC" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: IBGE | Concla | Busca online" sap:VirtualizedContainerService.HintSize="591,3817" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1" WindowResize="Maximize">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="557,3601" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="cadSelecao" />
+                                <Variable x:TypeArguments="x:String" Name="descSelecao" />
+                                <Variable x:TypeArguments="x:String" Name="cadDivisao" />
+                                <Variable x:TypeArguments="x:String" Name="descDivisao" />
+                                <Variable x:TypeArguments="x:String" Name="cadGrupo" />
+                                <Variable x:TypeArguments="x:String" Name="descGrupo" />
+                                <Variable x:TypeArguments="x:String" Name="cadClasse" />
+                                <Variable x:TypeArguments="x:String" Name="descClasse" />
+                                <Variable x:TypeArguments="x:String" Name="descSubClasse" />
+                                <Variable x:TypeArguments="x:String" Default="POCROITBank.xlsx" Name="strExcel" />
+                                <Variable x:TypeArguments="x:String" Name="descSecao" />
+                                <Variable x:TypeArguments="x:String" Name="cadSecao" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Seção'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_28" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="342, 301, 20, 32" FriendlyName="'C'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' /&gt;" Guid="c8c3c235-a830-46d9-a9f5-ec576a48cbdd" InformativeScreenshot="3495a9fc155f92e8584257dc086472da.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 301, 91, 32" FriendlyName="'Seção'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname='' check:text='Seção:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAkCAYAAADvqeb3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVGhD7dVBCoMwEIXhXrrr3qCHzA1cuQqWtkwZhzFijHlOfYsPkkwQ+iP2NgzDRBi/+Ckl6mwWfxxH6ojxgRgfiPGBGB+I8YEYH4jxgRgfiPGBThf//nh+yNrO/0l1fImkefe2kue0fOZZVcX3wlwhVmvN4ltyx7vbemb3UeyKv/Sj7bner83k3JvpeWkWxSHf/NLezjxyR9/Va28fUXV8IRF0DHsm9Ew/Q1u6q9fePqLd8YWOUQqzZab3pVlUzf5w9Zmd955Fccg335vXzvR87Vz2UTT77GwVNVhLsPhvjA+Iz7f+C/rmXx3jAzE+EOMDMT4Q4wMxPhDjA83i55ypI8YHYnyYPL0AXGsHmy+Fud8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[cadSecao]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Seção'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_29" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="362, 301, 749, 32" ElementType="Text" FriendlyName="'INDÚSTRIAS DE'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tag='TD' type='' /&gt;" Guid="92812c7a-54fe-43be-b89f-4658c7e302e5" InformativeScreenshot="d5133ff64165b21738f3d1aa0252b712.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 301, 91, 32" FriendlyName="'Seção'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TD' type='' aaname='' check:text='Seção:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAkCAYAAADvqeb3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAELSURBVGhD7dVBCoMwEIXhXrrr3qCHzA1cuQqWtkwZhzFijHlOfYsPkkwQ+iP2NgzDRBi/+Ckl6mwWfxxH6ojxgRgfiPGBGB+I8YEYH4jxgRgfiPGBThf//nh+yNrO/0l1fImkefe2kue0fOZZVcX3wlwhVmvN4ltyx7vbemb3UeyKv/Sj7bner83k3JvpeWkWxSHf/NLezjxyR9/Va28fUXV8IRF0DHsm9Ew/Q1u6q9fePqLd8YWOUQqzZab3pVlUzf5w9Zmd955Fccg335vXzvR87Vz2UTT77GwVNVhLsPhvjA+Iz7f+C/rmXx3jAzE+EOMDMT4Q4wMxPhDjA83i55ypI8YHYnyYPL0AXGsHmy+Fud8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[descSecao]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Divisão'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_30" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="367, 340, 14, 15" ElementType="Text" FriendlyName="'10'" FullSelectorArgument="&lt;webctrl aaname='10' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="d5962eb7-1b06-4139-83d3-2051708e98ca" InformativeScreenshot="fd2ae6f093cad2be8c9eec699869f45b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 332, 91, 31" FriendlyName="'Divisão'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Divisão:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD7SURBVGhD7ZoxDsMwDAP76c79QR/pH3jyFKRoAQGKIKeO44QywOEAi2SWm/PIOa9fUkprKYXcCOUD2chfloXcCOUDoXwglA+E8oFQPhDKB0L5QCgfCOUDmUL+8/X+IW/bz0qXfJGh8XqdWVo2guyOfDMDp+TXbtLGEPk2k7fO7M52tby3s3dEQsjXb3vr3Ot0v9dF5FL5R99ye+iN7PTbu6MTQr6+bW63tbd3RyeMfEHy2q61m4Eh8lvv2uaOLiKn5Gu83tu3bHTudbr/l8sdkS75ZAyUD4TygVA+EMoHQvlAKB8I5QOhfCCUD4TygWzke/+Qk+ugfBhl/QCN/i6Cy+ExZgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[cadDivisao]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Divisão'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_31" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="362, 332, 749, 31" FriendlyName="'10 FABRICAÇÃO'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="91d1d1e0-17b0-4976-b0ff-9982043e9677" InformativeScreenshot="cdb4da314e90e8e76cdef85931daafbc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 332, 91, 31" FriendlyName="'Divisão'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Divisão:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD7SURBVGhD7ZoxDsMwDAP76c79QR/pH3jyFKRoAQGKIKeO44QywOEAi2SWm/PIOa9fUkprKYXcCOUD2chfloXcCOUDoXwglA+E8oFQPhDKB0L5QCgfCOUDmUL+8/X+IW/bz0qXfJGh8XqdWVo2guyOfDMDp+TXbtLGEPk2k7fO7M52tby3s3dEQsjXb3vr3Ot0v9dF5FL5R99ye+iN7PTbu6MTQr6+bW63tbd3RyeMfEHy2q61m4Eh8lvv2uaOLiKn5Gu83tu3bHTudbr/l8sdkS75ZAyUD4TygVA+EMoHQvlAKB8I5QOhfCCUD4TygWzke/+Qk+ugfBhl/QCN/i6Cy+ExZgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[descDivisao]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Grupo'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_32" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="386, 371, 24, 15" ElementType="Text" FriendlyName="'10.1'" FullSelectorArgument="&lt;webctrl aaname='10.1' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="095e5bb0-11e8-41f1-aac0-7488d34f2334" InformativeScreenshot="c226e9dab2d5cd64c62b8318a7697d8e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 363, 91, 31" FriendlyName="'Grupo'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Grupo:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVGhD7doxDsIwEERRLk3NDThkbpAqlRXkYiVnZMdh42RYMcWTvN5Q5EPJY57nNZumaU0pyY0Un2gTf1kWuZHiEyk+keITKT6R4hMpPpHiEyk+keITKT7RqfjP13uj9oy0ueNjcH0B33PF74W2fflceca5dcZncYdzNJfG37srZzvjfPRztotmSHyb7Q73tbty9u6iG/bLL+96e5y9u+gUn8gVP9uLgrvWvjfjubeLxh0/s5fHCDjX7o+cjd3hDudoTsUfJXpEL8Un+on4/0rxiRSfSPGJFJ9I8YkUn0jxiRSfaBO/9h9yuY7i06T1A2VHyk/OFssZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[cadGrupo]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Grupo'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NGetText_33" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="362, 363, 749, 31" FriendlyName="'10.1 Abate'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="63d15090-485f-4845-b28e-e934313a4d14" InformativeScreenshot="8357079cca97f6c58d55d274302fb1b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 363, 91, 31" FriendlyName="'Grupo'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Grupo:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVGhD7doxDsIwEERRLk3NDThkbpAqlRXkYiVnZMdh42RYMcWTvN5Q5EPJY57nNZumaU0pyY0Un2gTf1kWuZHiEyk+keITKT6R4hMpPpHiEyk+keITKT7RqfjP13uj9oy0ueNjcH0B33PF74W2fflceca5dcZncYdzNJfG37srZzvjfPRztotmSHyb7Q73tbty9u6iG/bLL+96e5y9u+gUn8gVP9uLgrvWvjfjubeLxh0/s5fHCDjX7o+cjd3hDudoTsUfJXpEL8Un+on4/0rxiRSfSPGJFJ9I8YkUn0jxiRSfaBO/9h9yuY7i06T1A2VHyk/OFssZAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[descGrupo]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Classe'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_34" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="406, 402, 41, 15" ElementType="Text" FriendlyName="'10.11-2'" FullSelectorArgument="&lt;webctrl aaname='10.11-2' parentid='hierarquia' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' tag='A' type='' /&gt;" Guid="17bea1f5-230d-43b5-b858-117067a6b4c5" InformativeScreenshot="32efa5dc53faaec02d3e747242da10d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 394, 91, 31" FriendlyName="'Classe'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Classe:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVGhD7doxDoMwEETRXDp1bpBDcgMqV4iIwtIywSQyssdIv3hS1usUfEVUeczzvG6maVpTSuiI+Ea7+MuyoCPiGxHfiPhGxDcivhHxjYhvRHwj4hsR3+hS/OfrvaPn8S6+Vcc/C647HKuK/yuu7vOs5y12Oo+seXy9p7u4b7EbWZdffjyLO51L90u70nwXXV87Zzs9P9vpeRa/ewddXjvxrs56/s+udO9uquJvNECcS58du5FVx9/kB9UHLs1RaZfPa3c6j+xSfFxDfCPiGxHfiPhGxDcivhHxjYhvRHwj4hvt4h/9hxztEN8mrR+oeV0i0wshVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[cadClasse]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Classe'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_35" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="362, 394, 749, 31" FriendlyName="'10.11-2 Abate'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' /&gt;" Guid="5e79a99b-d264-47a1-96fb-662656bb53bb" InformativeScreenshot="82fa46f8830192a7ba4394031878c85c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 394, 91, 31" FriendlyName="'Classe'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Classe:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAjCAYAAADyrNZPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADvSURBVGhD7doxDoMwEETRXDp1bpBDcgMqV4iIwtIywSQyssdIv3hS1usUfEVUeczzvG6maVpTSuiI+Ea7+MuyoCPiGxHfiPhGxDcivhHxjYhvRHwj4hsR3+hS/OfrvaPn8S6+Vcc/C647HKuK/yuu7vOs5y12Oo+seXy9p7u4b7EbWZdffjyLO51L90u70nwXXV87Zzs9P9vpeRa/ewddXjvxrs56/s+udO9uquJvNECcS58du5FVx9/kB9UHLs1RaZfPa3c6j+xSfFxDfCPiGxHfiPhGxDcivhHxjYhvRHwj4hvt4h/9hxztEN8mrR+oeV0i0wshVAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[descClasse]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <uix:NGetText DisplayName="Get Text 'Subclasse'" sap:VirtualizedContainerService.HintSize="515,156" sap2010:WorkflowViewState.IdRef="NGetText_36" ScopeIdentifier="29da8c25-e356-42c0-bc51-b45e186f7eaa" Version="V1">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://cnae.ibge.gov.br/?view=subclasse&amp;tipo=cnae&amp;versao=7&amp;subclasse=1011201" DesignTimeRectangle="426, 433, 221, 15" ElementType="Text" FriendlyName="'1011-2/01 Frigorífico'" FullSelectorArgument="&lt;webctrl parentid='hierarquia' tableCol='3' tableRow='5' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hierarquia' type='' tag='SPAN' /&gt;" Guid="19c0cf09-4961-49a4-a323-4e1683ae80fc" InformativeScreenshot="50a7575116879d18e99f507462270eff.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="251, 425, 91, 32" FriendlyName="'Subclasse'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' aaname='' check:text='Subclasse:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAAkCAYAAADvqeb3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEpSURBVGhD7ZUxDsIwEAT5NDU/4JH5QapUURDFoWXJGcfYWYotRvLeniVriuQyz/P2ZJqmbV1XcyKWL+RN/rIs5kQsX4jlC7F8IZYvxPKFWL4Qyxdi+UIsX4jlC2mWf73dP9jbY47sIq33/pkm+XsiauXU7jGt9/6ZbvIR7jFnZ97lLss8H9Fx7sVP8rNH8RxznDnX3otz7JT2RnW9GPLNL+UjHbLXxQw7ztl+1mV5BM3yg3gkPhbPnI90CHeYs47npY7nAd7tzc/yA3wsP7y1Q0p7nHle02V7I+n2w8XZ3vlb5nOpw7Oi68WQbz72tecgZtxlGcm6mLd2nHvR7bNjjmP5QixfiOULsXwhli/E8oVYvhDLF2L5QixfyJt8cy4v+eZ8LF/GvD0ABf14b1RJlR4AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.Text>
+                                  <OutArgument x:TypeArguments="x:String">[descSubClasse]</OutArgument>
+                                </uix:NGetText.Text>
+                              </uix:NGetText>
+                              <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="515,1743" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[strExcel]">
+                                <ui:ExcelApplicationScope.Body>
+                                  <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="481,1634" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:ExcelWriteCell Cell="A2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_21" SheetName="Planilha1" Text="[cadSecao]" />
+                                      <ui:ModifyText DisplayName="Modify Text" sap:VirtualizedContainerService.HintSize="439,272" sap2010:WorkflowViewState.IdRef="ModifyText_3" OutputText="[descSecao]" SourceText="[descSecao]">
+                                        <ui:ModifyText.Body>
+                                          <ActivityAction>
+                                            <Sequence DisplayName="Fazer" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ucat:ToUpperLowerTextModification DisplayName="Colocar todo o texto em Maiúscula/Minúscula" sap:VirtualizedContainerService.HintSize="387,79" sap2010:WorkflowViewState.IdRef="ToUpperLowerTextModification_3" ModificationType="Lowercase" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ModifyText.Body>
+                                      </ui:ModifyText>
+                                      <ui:ExcelWriteCell Cell="B2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_22" SheetName="Planilha1" Text="[descSecao]" />
+                                      <ui:ExcelWriteCell Cell="C2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_23" SheetName="Planilha1" Text="[cadDivisao]" />
+                                      <ui:ExcelWriteCell Cell="D2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_24" SheetName="Planilha1" Text="[descDivisao]" />
+                                      <ui:ExcelWriteCell Cell="E2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_25" SheetName="Planilha1" Text="[cadGrupo]" />
+                                      <ui:ExcelWriteCell Cell="F2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_26" SheetName="Planilha1" Text="[descGrupo]" />
+                                      <ui:ExcelWriteCell Cell="G2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_27" SheetName="Planilha1" Text="[cadClasse]" />
+                                      <ui:ExcelWriteCell Cell="H2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_28" SheetName="Planilha1" Text="[descClasse]" />
+                                      <ui:ExcelWriteCell Cell="I2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_29" SheetName="Planilha1" Text="[descSubClasse]" />
+                                      <ui:ExcelWriteCell Cell="J2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_30" SheetName="Planilha1" Text="[descSubClasse]" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ExcelApplicationScope.Body>
+                              </ui:ExcelApplicationScope>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADxSURBVDhPpdIxDgFBGAVgV1ChoFZxBJXCDUhEIdlSJSq1S3AJIiJZhUI0m+gdQL2ixDLe2+zIy2QKG5t8G/v/5s3s7BSMMX/xFvPwFvP4XrP5cQ/G4wRreX7DBYJvAB6qWUMH0hWa8JCaFWvA2GnSDVpQl5pKNCBymmeYwhb6wJVon6I0AD9qWYEz7mAIZUiA9Tu0YQFL0bUBPVhJg3/swBNsQBEYHAInYr1iA9zlE5c8gA1MgK+k/QNf3QbYpbq4edxEO6MaaUDsNImfrQG+zXtBSQMC4MHQc8CDwwOkA62Qg3mlAbz9w1vMw1v8nSl8AF/uttd0vyW9AAAAAElFTkSuQmCC" InformativeScreenshot="70e1af95c750245475d2233c3f67cf11.png" Selector="&lt;html app='chrome.exe' title='IBGE | Concla | Busca online'/&gt;" Url="[strIBGEC]" />
+                        </uix:NApplicationCard.TargetApp>
+                      </uix:NApplicationCard>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Campo informado não corresponde a pesquisa, favor informar A, B ou C&quot;]" />
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
